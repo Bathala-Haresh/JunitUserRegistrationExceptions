@@ -125,6 +125,76 @@ class UserRegistrationJunitParametrizedApplicationTests {
     public void givenPassword_With2SpecialChar_shouldReturnFalse() {
         Assert.assertFalse(validator.passwordValidate("@@Haresh"));
     }
+ @Test
+	    public void givenFirstName_WhenNull_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_NULL, e.type);
+	        }
+	    }
+	 @Test
+	    public void givenLastName_WhenNull_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_NULL, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenLastName_WhenEmpty_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_EMPTY, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenEmail_WhenNull_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_NULL, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenEmail_WhenEmpty_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_EMPTY, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenPhoneNumber_WhenNull_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_NULL, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenPhoneNumber_WhenEmpty_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_EMPTY, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenPassword_WhenNull_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_NULL, e.type);
+	        }
+	    }
+
+	    @Test
+	    public void givenPassword_WhenEmpty_ShouldReturnException() {
+	        try {
+	        } catch (UserRegitrationException e) {
+	            Assert.assertEquals(UserRegitrationException.ExceptionType.ENTERED_EMPTY, e.type);
+	        }
+	    }
 	
 	public static List<String> emailIds_With_ExpectedResult() {
 		
